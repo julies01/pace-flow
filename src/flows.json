@@ -1,0 +1,1360 @@
+[
+    {
+        "id": "7e882834a913dab0",
+        "type": "tab",
+        "label": "CrunchTime P26 A15",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "238f9fd40981023d",
+        "type": "ui-text",
+        "z": "7e882834a913dab0",
+        "group": "9a2aa04d5ae1d098",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "échauffement",
+        "label": "Échauffement",
+        "format": "{{msg.payload}}",
+        "layout": "row-left",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "value": "payload",
+        "valueType": "msg",
+        "x": 120,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "5d470599e5542276",
+        "type": "ui-form",
+        "z": "7e882834a913dab0",
+        "name": "planning échauffement",
+        "group": "9a2aa04d5ae1d098",
+        "label": "",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "options": [
+            {
+                "label": "distance (en m)",
+                "key": "e_distance",
+                "type": "number",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "allure (en temps au kil)",
+                "key": "e_allure",
+                "type": "text",
+                "required": true,
+                "rows": null
+            }
+        ],
+        "formValue": {
+            "e_distance": "",
+            "e_allure": ""
+        },
+        "payload": "",
+        "submit": "Envoyer",
+        "cancel": "Effacer",
+        "resetOnSubmit": false,
+        "topic": "topic",
+        "topicType": "str",
+        "splitLayout": true,
+        "className": "",
+        "dropdownOptions": [],
+        "x": 120,
+        "y": 380,
+        "wires": [
+            [
+                "bdc68f3778131cf0",
+                "4b1727a7498a8e9f",
+                "node_stockage_bloc"
+            ]
+        ]
+    },
+    {
+        "id": "6000edc2ce04905d",
+        "type": "remote-access",
+        "z": "7e882834a913dab0",
+        "confignode": "5de60e12f1e001e0",
+        "name": "",
+        "verbose": 0,
+        "x": 100,
+        "y": 180,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "8384d8666da7fe14",
+        "type": "ui-text",
+        "z": "7e882834a913dab0",
+        "group": "9a2aa04d5ae1d098",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "corps de séance",
+        "label": "Corps de séance",
+        "format": "{{msg.payload}}",
+        "layout": "row-left",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "value": "payload",
+        "valueType": "msg",
+        "x": 130,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "6f701ca4727e5aa8",
+        "type": "ui-form",
+        "z": "7e882834a913dab0",
+        "name": "planning corps de séance",
+        "group": "9a2aa04d5ae1d098",
+        "label": "",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "options": [
+            {
+                "label": "répetition",
+                "key": "c_rep",
+                "type": "number",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "distance (en m)",
+                "key": "c_distance",
+                "type": "number",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "allure (en temps au kil)",
+                "key": "c_allure",
+                "type": "text",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "récupération (en s)",
+                "key": "c_récupération",
+                "type": "number",
+                "required": true,
+                "rows": null
+            }
+        ],
+        "formValue": {
+            "c_rep": "",
+            "c_distance": "",
+            "c_allure": "",
+            "c_récupération": ""
+        },
+        "payload": "",
+        "submit": "Envoyer",
+        "cancel": "Effacer",
+        "resetOnSubmit": false,
+        "topic": "topic",
+        "topicType": "str",
+        "splitLayout": true,
+        "className": "",
+        "dropdownOptions": [],
+        "x": 110,
+        "y": 500,
+        "wires": [
+            [
+                "0eb17e40b02f67e2",
+                "node_stockage_bloc"
+            ]
+        ]
+    },
+    {
+        "id": "e0e1f7661bb065b7",
+        "type": "ui-text",
+        "z": "7e882834a913dab0",
+        "group": "9a2aa04d5ae1d098",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "name": "retour au calme",
+        "label": "Retour au calme",
+        "format": "{{msg.payload}}",
+        "layout": "row-left",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "className": "",
+        "x": 120,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "b45d8812b7aec60f",
+        "type": "ui-form",
+        "z": "7e882834a913dab0",
+        "name": "planning retour au calme",
+        "group": "9a2aa04d5ae1d098",
+        "label": "",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "options": [
+            {
+                "label": "distance (en m)",
+                "key": "r_distance",
+                "type": "number",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "allure (en temps au kil)",
+                "key": "r_allure",
+                "type": "text",
+                "required": true,
+                "rows": null
+            }
+        ],
+        "formValue": {
+            "r_distance": "",
+            "r_allure": ""
+        },
+        "payload": "",
+        "submit": "Envoyer ",
+        "cancel": "Effacer",
+        "resetOnSubmit": false,
+        "topic": "topic",
+        "topicType": "str",
+        "splitLayout": true,
+        "className": "",
+        "dropdownOptions": [],
+        "x": 150,
+        "y": 620,
+        "wires": [
+            [
+                "d704abbbcb023a7c",
+                "node_stockage_bloc"
+            ]
+        ]
+    },
+    {
+        "id": "bdc68f3778131cf0",
+        "type": "ui-template",
+        "z": "7e882834a913dab0",
+        "group": "4a39c295cac33e44",
+        "name": "récapitulatif échauffement",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "head": "",
+        "format": "<template>\n  <div style=\"font-family: inherit; font-size: 30px; color: #333; line-height: 1.8; padding: 4px 0;\">\n    <p style=\"font-weight: 600; margin-bottom: 2px;\">Échauffement :</p>\n    <p style=\"margin: 0; font-size: 22px;\">{{ msg.payload[\"e_distance\"] }}m   à {{ msg.payload[\"e_allure\"] }}/km</p>\n  </div>\n</template>",
+        "storeOutMessages": true,
+        "passthru": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 570,
+        "y": 420,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "0eb17e40b02f67e2",
+        "type": "ui-template",
+        "z": "7e882834a913dab0",
+        "group": "4a39c295cac33e44",
+        "name": "récapitulatif corps de séance",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "head": "",
+        "format": "<template>\n  <div style=\"font-family: inherit; font-size: 30px; color: #333; line-height: 1.8; padding: 4px 0;\">\n    <p style=\"font-weight: 600; margin-bottom: 2px;\">Corps de séance :</p>\n    <p style=\"margin: 0; font-size: 22px;\">{{ msg.payload[\"c_rep\"] }} ⨉ {{ msg.payload[\"c_distance\"] }}m   à {{ msg.payload[\"c_allure\"] }}/km</p>\n    <p style=\"margin: 0; font-size: 22px;\">Récupération : {{ msg.payload[\"c_récupération\"] }}s</p>\n  </div>\n</template>",
+        "storeOutMessages": true,
+        "passthru": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 580,
+        "y": 500,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d704abbbcb023a7c",
+        "type": "ui-template",
+        "z": "7e882834a913dab0",
+        "group": "4a39c295cac33e44",
+        "name": "récapitulatif retour au calme",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "head": "",
+        "format": "<template>\n  <div style=\"font-family: inherit; font-size: 30px; color: #333; line-height: 1.8; padding: 4px 0;\">\n    <p style=\"font-weight: 600; margin-bottom: 2px;\">Retour au calme :</p>\n    <p style=\"margin: 0; font-size: 22px;\">{{ msg.payload[\"r_distance\"] }}m   à {{ msg.payload[\"r_allure\"] }}/km</p>\n  </div>\n</template>",
+        "storeOutMessages": true,
+        "passthru": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 580,
+        "y": 600,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "8ca5d55797a16df8",
+        "type": "function",
+        "z": "7e882834a913dab0",
+        "name": "calcul vitesse",
+        "func": "const e_allure = msg.payload[\"e_allure\"]\nconst c_allure = msg.payload[\"c_allure\"]\nconst r_allure = msg.payload[\"r_allure\"]\n\nfunction parseAllureToSeconds(allureString) {\n    const regex = /(?:(\\d+)[':])?(\\d{1,2})/;\n\n    const match = allureString.match(regex);\n\n    if (!match) {\n        throw new Error(`Format d'allure non reconnu : \"${allureString}\"`);\n    }\n\n    const minutes = match[1] ? parseInt(match[1], 10) : 0;\n    const seconds = parseInt(match[2], 10);\n\n    if (seconds >= 60) {\n        throw new Error(\"Les secondes doivent être < 60.\");\n    }\n\n    const secs = minutes * 60 + seconds;\n    const heure = secs/3600;\n    const resultat = 1/heure;\n    return resultat.toFixed(2);\n}\n\nmsg.payload.e_vitesse = parseAllureToSeconds(e_allure);\nmsg.payload.c_vitesse = parseAllureToSeconds(c_allure);\nmsg.payload.r_vitesse = parseAllureToSeconds(r_allure);\n\nconsole.log(msg.payload)\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 640,
+        "y": 120,
+        "wires": [
+            [
+                "node_stockage_bloc",
+                "7a0151d6a5a62332",
+                "d859aa86ddfebdb3"
+            ]
+        ]
+    },
+    {
+        "id": "f78c17b09804405b",
+        "type": "ui-dropdown",
+        "z": "7e882834a913dab0",
+        "group": "bfa146be4757f15a",
+        "name": "",
+        "label": "premier élément écran",
+        "tooltip": "",
+        "order": 1,
+        "width": "",
+        "height": "",
+        "passthru": false,
+        "multiple": false,
+        "chips": false,
+        "clearable": true,
+        "options": [
+            {
+                "label": "Vitesse",
+                "value": "vitesse",
+                "type": "str"
+            },
+            {
+                "label": "Distance parcourue",
+                "value": "d_parcourue",
+                "type": "str"
+            },
+            {
+                "label": "Distance restante",
+                "value": "d_restante",
+                "type": "str"
+            },
+            {
+                "label": "Allure",
+                "value": "allure",
+                "type": "str"
+            },
+            {
+                "label": "Temps écoulé",
+                "value": "t_ecoule",
+                "type": "str"
+            },
+            {
+                "label": "Temps restant",
+                "value": "t_restant",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "typeIsComboBox": false,
+        "msgTrigger": "onChange",
+        "x": 800,
+        "y": 760,
+        "wires": [
+            [
+                "a5600a317c58d5c9"
+            ]
+        ]
+    },
+    {
+        "id": "a5600a317c58d5c9",
+        "type": "function",
+        "z": "7e882834a913dab0",
+        "name": "1 selctionné",
+        "func": "flow.set(\"selectedWidget1\", msg.payload);\n\nconst d = flow.get(\"lastSimData\");\nif (d) {\n    msg.payload = d;\n    return msg;\n}\nnode.warn(\"lastSimData: \" + JSON.stringify(flow.get(\"lastSimData\")));\nnode.warn(\"selected1: \" + flow.get(\"selectedWidget1\"));\n\nreturn null;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1150,
+        "y": 760,
+        "wires": [
+            [
+                "591893cdf2b555b4"
+            ]
+        ]
+    },
+    {
+        "id": "b9a28cf0e877afed",
+        "type": "ui-dropdown",
+        "z": "7e882834a913dab0",
+        "group": "bfa146be4757f15a",
+        "name": "deuxième élément écran",
+        "label": "deuxième élément écran",
+        "tooltip": "",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "multiple": false,
+        "chips": false,
+        "clearable": false,
+        "options": [
+            {
+                "label": "Vitesse",
+                "value": "vitesse",
+                "type": "str"
+            },
+            {
+                "label": "Distance parcourue",
+                "value": "d_parcourue",
+                "type": "str"
+            },
+            {
+                "label": "Distance restante",
+                "value": "d_restante",
+                "type": "str"
+            },
+            {
+                "label": "Allure",
+                "value": "allure",
+                "type": "str"
+            },
+            {
+                "label": "Temps écoulé",
+                "value": "t_ecoule",
+                "type": "str"
+            },
+            {
+                "label": "Temps restant",
+                "value": "t_restant",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "typeIsComboBox": true,
+        "msgTrigger": "onChange",
+        "x": 810,
+        "y": 820,
+        "wires": [
+            [
+                "037c6b511e9d63f8"
+            ]
+        ]
+    },
+    {
+        "id": "037c6b511e9d63f8",
+        "type": "function",
+        "z": "7e882834a913dab0",
+        "name": "2 selectionné",
+        "func": "flow.set('selectedWidget2', msg.payload)\n\nconst d = flow.get(\"lastSimData\");\nif (d) {\n    msg.payload = d;\n    return msg;\n}\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1150,
+        "y": 820,
+        "wires": [
+            [
+                "591893cdf2b555b4"
+            ]
+        ]
+    },
+    {
+        "id": "d3e60c738921bf48",
+        "type": "ui-gauge",
+        "z": "7e882834a913dab0",
+        "name": "affichage vitesse",
+        "group": "c29b6a847c5f7001",
+        "order": 3,
+        "value": "payload",
+        "valueType": "msg",
+        "width": 4,
+        "height": 3,
+        "gtype": "gauge-half",
+        "gstyle": "needle",
+        "title": "Vitesse actuelle",
+        "alwaysShowTitle": false,
+        "units": "km/h",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#005590",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "10",
+                "color": "#3f8dce",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "20",
+                "color": "#7094bc",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "30",
+                "color": "#effaff",
+                "text": "",
+                "textType": "label"
+            }
+        ],
+        "min": 0,
+        "max": "40",
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 1370,
+        "y": 80,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3d995940d5d0c14a",
+        "type": "mqtt in",
+        "z": "7e882834a913dab0",
+        "name": "",
+        "topic": "esp32/A15",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "1091be7cb388ef12",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 440,
+        "y": 1180,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "node_stockage_bloc",
+        "type": "function",
+        "z": "7e882834a913dab0",
+        "name": "stockage bloc",
+        "func": "flow.set(\"sessionBlock\", {\n    e_distance: parseFloat(msg.payload[\"e_distance\"]),\n    e_vitesse: parseFloat(flow.get(\"e_vitesse\")),   \n    eallure: msg.payload[\"e_allure\"],\n\n    c_distance: parseFloat(msg.payload[\"c_distance\"]),\n    c_rep: parseFloat(msg.payload[\"c_rep\"]),\n    c_vitesse: parseFloat(flow.get(\"c_vitesse\")),\n    c_recuperation: parseFloat(msg.payload[\"c_récupération\"]),\n    c_allure: msg.payload[\"c-allure\"],\n\n    r_distance: parseFloat(msg.payload[\"r_distance\"]),\n    r_evitesse: parseFloat(flow.get(\"r_vitesse\")),\n    r_allure: msg.payload[\"r_allure\"]\n});\n\n\nreturn null;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 860,
+        "y": 320,
+        "wires": [
+            [
+                "node_init_simulation"
+            ]
+        ]
+    },
+    {
+        "id": "node_btn_start",
+        "type": "ui-button",
+        "z": "7e882834a913dab0",
+        "group": "c29b6a847c5f7001",
+        "name": "Démarrer",
+        "label": "▶ Démarrer",
+        "order": 1,
+        "width": 3,
+        "height": 1,
+        "emulateClick": false,
+        "tooltip": "Démarrer la simulation",
+        "className": "",
+        "icon": "",
+        "iconPosition": "left",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "start",
+        "topicType": "str",
+        "buttonColor": "",
+        "textColor": "",
+        "iconColor": "",
+        "enableClick": true,
+        "enablePointerdown": false,
+        "pointerdownPayload": "",
+        "pointerdownPayloadType": "str",
+        "enablePointerup": false,
+        "pointerupPayload": "",
+        "pointerupPayloadType": "str",
+        "x": 1080,
+        "y": 260,
+        "wires": [
+            [
+                "node_init_simulation"
+            ]
+        ]
+    },
+    {
+        "id": "node_btn_stop",
+        "type": "ui-button",
+        "z": "7e882834a913dab0",
+        "group": "c29b6a847c5f7001",
+        "name": "Arrêter",
+        "label": "⏹ Arrêter",
+        "order": 2,
+        "width": 3,
+        "height": 1,
+        "emulateClick": false,
+        "tooltip": "Arrêter la simulation",
+        "className": "",
+        "icon": "",
+        "iconPosition": "left",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "stop",
+        "topicType": "str",
+        "x": 1080,
+        "y": 320,
+        "wires": [
+            [
+                "node_stop"
+            ]
+        ]
+    },
+    {
+        "id": "node_stop",
+        "type": "function",
+        "z": "7e882834a913dab0",
+        "name": "stop simulation",
+        "func": "const sim = flow.get(\"sim\") || {};\nsim.running = false;\nflow.set(\"sim\", sim);\nreturn null;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1300,
+        "y": 320,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "node_init_simulation",
+        "type": "function",
+        "z": "7e882834a913dab0",
+        "name": "init simulation",
+        "func": "const block = flow.get(\"sessionBlock\");\nif (!block) {\n    node.warn(\"Aucun bloc de session trouvé !\");\n    return null;\n}\n\nconst vitesseMs = (block.vitesse * 1000) / 3600;\nconst dureeTotaleRep = Math.round(block.distance / vitesseMs);\n\nflow.set(\"sim\", {\n    running: true,\n    repActuelle: 1,\n    repTotal: block.repetitions,\n    distance: block.distance,\n    vitesse: block.vitesse,\n    allure: block.allure,\n    recuperation: block.recuperation,\n    distanceParcourue: 0,\n    secondesRep: 0,\n    enPause: false,\n    secondesPause: 0,\n    termine: false,\n    dureeTotaleRep: dureeTotaleRep\n});\n\nreturn { payload: \"started\" };",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1300,
+        "y": 260,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "node_inject_tick",
+        "type": "inject",
+        "z": "7e882834a913dab0",
+        "name": "tick 1s",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "",
+        "topic": "",
+        "payload": "tick",
+        "payloadType": "str",
+        "x": 1060,
+        "y": 560,
+        "wires": [
+            [
+                "node_tick_simulation"
+            ]
+        ]
+    },
+    {
+        "id": "node_tick_simulation",
+        "type": "function",
+        "z": "7e882834a913dab0",
+        "name": "tick simulation",
+        "func": "const sim = flow.get(\"sim\");\nif (!sim || !sim.running) return null;\n\nconst vitesseMs = (sim.vitesse * 1000) / 3600;\nconst dureeTotaleRep = sim.dureeTotaleRep;\n\nif (sim.enPause) {\n    sim.secondesPause++;\n\n    if (sim.secondesPause >= sim.recuperation) {\n        sim.enPause = false;\n        sim.secondesPause = 0;\n        sim.repActuelle++;\n        sim.distanceParcourue = 0;\n        sim.secondesRep = 0;\n\n        if (sim.repActuelle > sim.repTotal) {\n            sim.running = false;\n            sim.termine = true;\n            flow.set(\"sim\", sim);\n            return { payload: { termine: true } };\n        }\n    }\n} else {\n    sim.secondesRep++;\n    sim.distanceParcourue = Math.min(\n        Math.round(vitesseMs * sim.secondesRep),\n        sim.distance\n    );\n\n    if (sim.distanceParcourue >= sim.distance) {\n        if (sim.repActuelle < sim.repTotal) {\n            sim.enPause = true;\n            sim.secondesPause = 0;\n        } else {\n            sim.running = false;\n            sim.termine = true;\n            flow.set(\"sim\", sim);\n            return { payload: { termine: true } };\n        }\n    }\n}\n\nflow.set(\"sim\", sim);\n\nconst tempsRestant = Math.max(0, dureeTotaleRep - sim.secondesRep);\nconst fmt = s => `${Math.floor(s/60)}:${String(s%60).padStart(2,'0')}`;\n\nreturn {\n    payload: {\n        enPause: sim.enPause,\n        pauseRestante: sim.recuperation - sim.secondesPause,\n        repActuelle: sim.repActuelle,\n        repTotal: sim.repTotal,\n        allure : sim.allure,\n        distanceParcourue: sim.distanceParcourue,\n        distanceRestante: Math.max(0, sim.distance - sim.distanceParcourue),\n        tempsEcoule: fmt(sim.secondesRep),\n        tempsRestant: fmt(tempsRestant),\n        termine: false\n    }\n};",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1260,
+        "y": 560,
+        "wires": [
+            [
+                "node_formateur",
+                "591893cdf2b555b4"
+            ]
+        ]
+    },
+    {
+        "id": "node_formateur",
+        "type": "function",
+        "z": "7e882834a913dab0",
+        "name": "formateur affichage",
+        "func": "const d = msg.payload;\n\nif (d.termine) {\n    node.send([\n        { payload: \"✅ Terminé !\" },\n        { payload: \"—\" },\n        { payload: \"—\" },\n        { payload: \"—\" },\n        { payload: \"—\" }\n    ]);\n    return null;\n}\n\nif (d.enPause) {\n    node.send([\n        { payload: `${d.repActuelle} / ${d.repTotal}` },\n        { payload: \"⏸ Récup\" },\n        { payload: \"⏸ Récup\" },\n        { payload: `${d.pauseRestante}s` },\n        { payload: \"—\" }\n    ]);\n    return null;\n}\n\nnode.send([\n    { payload: `${d.repActuelle} / ${d.repTotal}` },\n    { payload: `${d.distanceParcourue} m` },\n    { payload: `${d.distanceRestante} m` },\n    { payload: d.tempsEcoule },\n    { payload: d.tempsRestant }\n]);\nreturn null;",
+        "outputs": 5,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1520,
+        "y": 420,
+        "wires": [
+            [
+                "75d6ce68cd9b9e35"
+            ],
+            [
+                "617182e33ca75778"
+            ],
+            [
+                "4d1a975f42f69cbf"
+            ],
+            [
+                "551d932dd3a27b1b"
+            ],
+            [
+                "9aa0721063fc59e1"
+            ]
+        ]
+    },
+    {
+        "id": "7a0151d6a5a62332",
+        "type": "function",
+        "z": "7e882834a913dab0",
+        "name": "vitesse pour gauge",
+        "func": "const e_vitesse = parseFloat(msg.payload[\"e_vitesse\"]);\nconst c_vitesse = parseFloat(msg.payload[\"c_vitesse\"]);\nconst r_vitesse = parseFloat(msg.payload[\"r_vitesse\"]);\n\nconsole.log(r_vitesse)\nconsole.log(msg.payload[\"partie_seance\"])\n\nif (msg.payload[\"partie_seance\"] == \"Échauffement\") {\n    msg.payload = e_vitesse;\n}\nelse if (msg.payload[\"partie_seance\"] == \"Corps de séance\") {\n    msg.payload = c_vitesse;\n}\nelse if (msg.payload[\"partie_seance\"] == \"Retour au calme\") {\n    msg.payload = r_vitesse;\n}\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1030,
+        "y": 80,
+        "wires": [
+            [
+                "d3e60c738921bf48",
+                "566a691318ffa727"
+            ]
+        ]
+    },
+    {
+        "id": "4b1727a7498a8e9f",
+        "type": "function",
+        "z": "7e882834a913dab0",
+        "name": "récupération allure",
+        "func": "msg.payload = msg.payload[\"e_allure\"]\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1070,
+        "y": 160,
+        "wires": [
+            [
+                "032cda29c94d8641"
+            ]
+        ]
+    },
+    {
+        "id": "032cda29c94d8641",
+        "type": "ui-template",
+        "z": "7e882834a913dab0",
+        "group": "c29b6a847c5f7001",
+        "name": "affichage allure",
+        "order": 4,
+        "width": 6,
+        "height": 0,
+        "head": "",
+        "format": "<template>\n  <div style=\"padding: 18px 20px 16px; display: flex; flex-direction: column; gap: 6px;\">\n    <div style=\"font-size: 13px; color: #888;\">Allure</div>\n    <div style=\"font-size: 36px; font-weight: 700; color: #1a1a1a; line-height: 1;\">{{ msg.payload }}</div>\n    <div style=\"font-size: 13px; color: #aaa;\">min/km</div>\n  </div>\n</template>",
+        "storeOutMessages": true,
+        "passthru": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 1300,
+        "y": 160,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "75d6ce68cd9b9e35",
+        "type": "ui-template",
+        "z": "7e882834a913dab0",
+        "group": "c29b6a847c5f7001",
+        "name": "Répétition",
+        "order": 5,
+        "width": 5,
+        "height": 0,
+        "head": "",
+        "format": "<template>\n  <div style=\"padding: 18px 20px 16px; display: flex; flex-direction: column; gap: 6px;\">\n    <div style=\"font-size: 13px; color: #888;\">Répétition</div>\n    <div style=\"font-size: 36px; font-weight: 700; color: #1a1a1a; line-height: 1;\">{{ msg.payload }}</div>\n  </div>\n</template>\n",
+        "storeOutMessages": true,
+        "passthru": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 1870,
+        "y": 400,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "617182e33ca75778",
+        "type": "ui-template",
+        "z": "7e882834a913dab0",
+        "group": "c29b6a847c5f7001",
+        "name": "Distance parcourue",
+        "order": 7,
+        "width": 5,
+        "height": 0,
+        "head": "",
+        "format": "<template>\n  <div style=\"padding: 18px 20px 16px; display: flex; flex-direction: column; gap: 6px;\">\n    <div style=\"font-size: 13px; color: #888;\">Distance parcourue</div>\n    <div style=\"font-size: 36px; font-weight: 700; color: #1a1a1a; line-height: 1;\">{{ msg.payload }}</div>\n    <div style=\"font-size: 13px; color: #aaa;\">m</div>\n  </div>\n</template>",
+        "storeOutMessages": true,
+        "passthru": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 1890,
+        "y": 440,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4d1a975f42f69cbf",
+        "type": "ui-template",
+        "z": "7e882834a913dab0",
+        "group": "c29b6a847c5f7001",
+        "name": "Distance restante",
+        "order": 8,
+        "width": 5,
+        "height": 0,
+        "head": "",
+        "format": "<template>\n  <div style=\"padding: 18px 20px 16px; display: flex; flex-direction: column; gap: 6px;\">\n    <div style=\"font-size: 13px; color: #888;\">Distance restante</div>\n    <div style=\"font-size: 36px; font-weight: 700; color: #1a1a1a; line-height: 1;\">{{ msg.payload }}</div>\n    <div style=\"font-size: 13px; color: #aaa;\">m</div>\n  </div>\n</template>",
+        "storeOutMessages": true,
+        "passthru": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 1890,
+        "y": 480,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "551d932dd3a27b1b",
+        "type": "ui-template",
+        "z": "7e882834a913dab0",
+        "group": "c29b6a847c5f7001",
+        "name": "Temps écoulé",
+        "order": 6,
+        "width": 5,
+        "height": 0,
+        "head": "",
+        "format": "<template>\n  <div style=\"padding: 18px 20px 16px; display: flex; flex-direction: column; gap: 6px;\">\n    <div style=\"font-size: 13px; color: #888;\">Temps écoulé</div>\n    <div style=\"font-size: 36px; font-weight: 700; color: #1a1a1a; line-height: 1;\">{{ msg.payload }}</div>\n    <div style=\"font-size: 13px; color: #aaa;\">min:sec</div>\n  </div>\n</template>",
+        "storeOutMessages": true,
+        "passthru": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 1880,
+        "y": 520,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9aa0721063fc59e1",
+        "type": "ui-template",
+        "z": "7e882834a913dab0",
+        "group": "c29b6a847c5f7001",
+        "name": "Temps restant",
+        "order": 9,
+        "width": 5,
+        "height": 0,
+        "head": "",
+        "format": "<template>\n  <div style=\"padding: 18px 20px 16px; display: flex; flex-direction: column; gap: 6px;\">\n    <div style=\"font-size: 13px; color: #888;\">Temps restant</div>\n    <div style=\"font-size: 36px; font-weight: 700; color: #1a1a1a; line-height: 1;\">{{ msg.payload }}</div>\n    <div style=\"font-size: 13px; color: #aaa;\">min:sec</div>\n  </div>\n</template>",
+        "storeOutMessages": true,
+        "passthru": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 1880,
+        "y": 560,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "591893cdf2b555b4",
+        "type": "function",
+        "z": "7e882834a913dab0",
+        "name": "formateur écran",
+        "func": "flow.set(\"lastSimData\", msg.payload);\nconst selected1 = flow.get(\"selectedWidget1\") || \"vitesse\";\nconst selected2 = flow.get(\"selectedWidget2\") || \"repetition\";\nconst d = msg.payload;\nconst block = flow.get(\"sessionBlock\") || {};\n\nconst labels = {\n    repetition: \"Répétition\",\n    d_parcourue: \"Distance parcourue\",\n    d_restante: \"Distance restante\",\n    t_ecoule: \"Temps écoulé\",\n    t_restant: \"Temps restant\",\n    vitesse: \"Vitesse\",\n    allure: \"Allure\"\n};\n\nconst units = {\n    repetition: \"\",\n    d_parcourue: \"m\",\n    d_restante: \"m\",\n    t_ecoule: \"min:sec\",\n    t_restant: \"min:sec\",\n    vitesse: \"km/h\",\n    allure: \"min/km\"\n};\n\nfunction getValue(selected, d, block) {\n    if (d.termine) return \"✅ Terminé !\";\n    if (d.enPause) {\n        const pauseValues = {\n            repetition: `${d.repActuelle} / ${d.repTotal}`,\n            d_parcourue: \"⏸\",\n            d_restante: \"⏸\",\n            t_ecoule: `${d.pauseRestante}s`,\n            t_restant: \"—\",\n            vitesse: \"⏸\",\n            allure: \"⏸\"\n        };\n        return pauseValues[selected];\n    }\n    const values = {\n        repetition: `${d.repActuelle} / ${d.repTotal}`,\n        d_parcourue: `${d.distanceParcourue}`,\n        d_restante: `${d.distanceRestante}`,\n        t_ecoule: d.tempsEcoule,\n        t_restant: d.tempsRestant,\n        vitesse: `${parseFloat(flow.get(\"vitesse\")).toFixed(2)}`,\n        allure: d.allure\n    };\n    return values[selected];\n}\n\nmsg.payload = {\n    label1: labels[selected1],\n    value1: getValue(selected1, d, block),\n    unit1: units[selected1],\n    label2: labels[selected2],\n    value2: getValue(selected2, d, block),\n    unit2: units[selected2]\n};\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1600,
+        "y": 640,
+        "wires": [
+            [
+                "3680aa30bc585c6f"
+            ]
+        ]
+    },
+    {
+        "id": "3680aa30bc585c6f",
+        "type": "ui-template",
+        "z": "7e882834a913dab0",
+        "group": "248af2f6e80e5296",
+        "name": "Écran",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "head": "",
+        "format": "<template>\n  <div style=\"display: grid; grid-template-columns: 1fr 1fr; gap: 12px; padding: 18px 20px;\">\n\n    <div style=\"display: flex; flex-direction: column; gap: 6px;\">\n      <div style=\"font-size: 13px; color: #888;\">{{ msg.payload.label1 }}</div>\n      <div style=\"font-size: 36px; font-weight: 700; color: #1a1a1a; line-height: 1;\">{{ msg.payload.value1 }}</div>\n      <div style=\"font-size: 13px; color: #aaa;\">{{ msg.payload.unit1 }}</div>\n    </div>\n\n    <div style=\"display: flex; flex-direction: column; gap: 6px;\">\n      <div style=\"font-size: 13px; color: #888;\">{{ msg.payload.label2 }}</div>\n      <div style=\"font-size: 36px; font-weight: 700; color: #1a1a1a; line-height: 1;\">{{ msg.payload.value2 }}</div>\n      <div style=\"font-size: 13px; color: #aaa;\">{{ msg.payload.unit2 }}</div>\n    </div>\n\n  </div>\n</template>",
+        "storeOutMessages": true,
+        "passthru": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 2010,
+        "y": 680,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "268f153ab48b7601",
+        "type": "ui-dropdown",
+        "z": "7e882834a913dab0",
+        "group": "1357b15713a31b08",
+        "name": "Quelle partie de la séance lancer ?",
+        "label": "Select Option:",
+        "tooltip": "",
+        "order": 1,
+        "width": 0,
+        "height": 2,
+        "passthru": false,
+        "multiple": false,
+        "chips": false,
+        "clearable": true,
+        "options": [
+            {
+                "label": "Échauffement",
+                "value": "Échauffement",
+                "type": "str"
+            },
+            {
+                "label": "Corps de séance",
+                "value": "Corps de séance",
+                "type": "str"
+            },
+            {
+                "label": "Retour au calme",
+                "value": "Retour au calme",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "payload[\"partie_seance\"]",
+        "topicType": "msg",
+        "className": "",
+        "typeIsComboBox": false,
+        "msgTrigger": "onChange",
+        "x": 660,
+        "y": 40,
+        "wires": [
+            [
+                "7a0151d6a5a62332",
+                "5bfa935e23ade4d9"
+            ]
+        ]
+    },
+    {
+        "id": "566a691318ffa727",
+        "type": "debug",
+        "z": "7e882834a913dab0",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1360,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "72e43b2ed1f8ebc9",
+        "type": "function",
+        "z": "7e882834a913dab0",
+        "name": "récupération des données",
+        "func": "let buffer = {};\n\nif (msg.payload && msg.payload[\"e_allure\"]) buffer[\"e_allure\"] = msg.payload[\"e_allure\"];\nif (msg.payload && msg.payload[\"c_allure\"]) buffer[\"c_allure\"] = msg.payload[\"c_allure\"];\nif (msg.payload && msg.payload[\"r_allure\"]) buffer[\"r_allure\"] = msg.payload[\"r_allure\"];\n\nflow.set(\"allure_buffer\", buffer);\n\nif (buffer[\"e_allure\"] && buffer[\"c_allure\"] && buffer[\"r_allure\"]) {\n    let readyMsg = { payload: {} };\n    readyMsg.payload[\"e_allure\"] = buffer[\"e_allure\"];\n    readyMsg.payload[\"c_allure\"] = buffer[\"c_allure\"];\n    readyMsg.payload[\"r_allure\"] = buffer[\"r_allure\"];\n\n    flow.set(\"allure_buffer\", {});\n\n    console.log(msg.payload)\n    return readyMsg; \n} else {\n    return null;\n}",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 350,
+        "y": 220,
+        "wires": [
+            [
+                "8ca5d55797a16df8",
+                "9220226f36a657f6"
+            ]
+        ]
+    },
+    {
+        "id": "14dd1a523a40c7b0",
+        "type": "inject",
+        "z": "7e882834a913dab0",
+        "name": "c-allure",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{   \"e_allure\": \"3'35\\\"\",   \"c_allure\": \"3'35\\\"\",   \"r_allure\": \"3'35\\\"\" }",
+        "payloadType": "json",
+        "x": 90,
+        "y": 240,
+        "wires": [
+            [
+                "72e43b2ed1f8ebc9"
+            ]
+        ]
+    },
+    {
+        "id": "d859aa86ddfebdb3",
+        "type": "debug",
+        "z": "7e882834a913dab0",
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 920,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "5bfa935e23ade4d9",
+        "type": "debug",
+        "z": "7e882834a913dab0",
+        "name": "debug 3",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 940,
+        "y": 20,
+        "wires": []
+    },
+    {
+        "id": "9220226f36a657f6",
+        "type": "debug",
+        "z": "7e882834a913dab0",
+        "name": "debug 4",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 660,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "9a2aa04d5ae1d098",
+        "type": "ui-group",
+        "name": "Planning de la séance",
+        "page": "31d77632f13ee6e8",
+        "width": "6",
+        "height": "5",
+        "order": 1,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "5de60e12f1e001e0",
+        "type": "remote-config",
+        "name": "Node-RED UI",
+        "host": "localhost",
+        "protocol": "http",
+        "port": "1880",
+        "baseurl": "/dashboard",
+        "instancehash": "4w0l3b9pd5uwlum9dik8zav95b3ckk2u8fdyehlsgtpqipyfs1firlpu0t0nnwx3",
+        "server": "nodered04.remote-red.com",
+        "region": "de"
+    },
+    {
+        "id": "4a39c295cac33e44",
+        "type": "ui-group",
+        "name": "Récapitulatif",
+        "page": "31d77632f13ee6e8",
+        "width": "6",
+        "height": "4",
+        "order": 2,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "bfa146be4757f15a",
+        "type": "ui-group",
+        "name": "Gestion de l'écran",
+        "page": "1a886c335918a200",
+        "width": "10",
+        "height": "2",
+        "order": 1,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "c29b6a847c5f7001",
+        "type": "ui-group",
+        "name": "Affichage",
+        "page": "1a886c335918a200",
+        "width": 10,
+        "height": "4",
+        "order": 4,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "1091be7cb388ef12",
+        "type": "mqtt-broker",
+        "name": "UTBM",
+        "broker": "mqtt.ci-ciad.utbm.fr",
+        "port": 1883,
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "5",
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "248af2f6e80e5296",
+        "type": "ui-group",
+        "name": "Écran du robot",
+        "page": "1a886c335918a200",
+        "width": "10",
+        "height": "2",
+        "order": 3,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "1357b15713a31b08",
+        "type": "ui-group",
+        "name": "Sélection de la partie de la séance à simuler",
+        "page": "1a886c335918a200",
+        "width": "10",
+        "height": "2",
+        "order": 2,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "31d77632f13ee6e8",
+        "type": "ui-page",
+        "name": "Planification de la séance",
+        "ui": "0bfdb51fb4239d8a",
+        "path": "/page1",
+        "icon": "home",
+        "layout": "grid",
+        "theme": "6cdaeaffae7a91f8",
+        "order": 1,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "1a886c335918a200",
+        "type": "ui-page",
+        "name": "Affichage",
+        "ui": "0bfdb51fb4239d8a",
+        "path": "/page2",
+        "icon": "home",
+        "layout": "flex",
+        "theme": "6cdaeaffae7a91f8",
+        "order": 2,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "0bfdb51fb4239d8a",
+        "type": "ui-base",
+        "name": "My Dashboard",
+        "path": "/dashboard",
+        "appIcon": "",
+        "includeClientData": true,
+        "acceptsClientConfig": [
+            "ui-notification",
+            "ui-control",
+            "ui-text"
+        ],
+        "showPathInSidebar": false,
+        "headerContent": "page",
+        "navigationStyle": "default",
+        "titleBarStyle": "default",
+        "showReconnectNotification": true,
+        "notificationDisplayTime": "5",
+        "showDisconnectNotification": true,
+        "allowInstall": true
+    },
+    {
+        "id": "6cdaeaffae7a91f8",
+        "type": "ui-theme",
+        "name": "thème piste d'athlé",
+        "colors": {
+            "surface": "#3f8dcf",
+            "primary": "#3f8dcf",
+            "bgPage": "#eeeeee",
+            "groupBg": "#ffffff",
+            "groupOutline": "#cccccc"
+        },
+        "sizes": {
+            "pagePadding": "12px",
+            "groupGap": "12px",
+            "groupBorderRadius": "4px",
+            "widgetGap": "12px"
+        }
+    },
+    {
+        "id": "ebb5fce9d408abb6",
+        "type": "global-config",
+        "env": [],
+        "modules": {
+            "@flowfuse/node-red-dashboard": "1.30.2",
+            "node-red-contrib-remote": "2.0.5"
+        }
+    }
+]
